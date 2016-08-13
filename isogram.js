@@ -9,4 +9,8 @@ Isogram.prototype.isIsogram() {
   throw new NotImplementedException();
 };
 
+Isogram.prototype.sanitize() {
+  throw new NotImplementedException();
+};
+
 module.exports = Isogram;
