@@ -1,4 +1,6 @@
-var Isogram = require('./isogram');
+var Isogram = require('./isogram'),
+  NotImplementedException = require('./exceptions/NotImplementedException.js'),
+  InvalidParameterException = require('./exceptions/InvalidParameterException.js');
 
 const UNPRINTABLE_CHARS = '\u0000\u0001\u0002\u0003\u0004\u0005\u0006\u0007\b\t\n\u000b\f\r\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f';
 
@@ -64,7 +66,16 @@ xdescribe('Isogram Test Suite', function () {
   });
 });
 
-describe('sanitize()', function() {
+describe('Isogram constructor', function() {
+  it('throws InvalidParameterException when given invalid input', function() {
+    expect(function() {
+      var word = new Isogram({});
+    }).toThrow(
+      new InvalidParameterException('This constructor takes a string!'));
+  });
+});
+
+xdescribe('sanitize()', function() {
   it('Removes control characters from input strings', function() {
     var word = new Isogram(UNPRINTABLE_CHARS + 'Foo Bar');
     var actual = word.sanitize();
