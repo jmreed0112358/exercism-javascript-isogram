@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jmreed0112358/exercism-javascript-isogram/issues"
   },
-  "homepage": "https://github.com/jmreed0112358/exercism-javascript-isogram#readme"
+  "homepage": "https://github.com/jmreed0112358/exercism-javascript-isogram#readme",
+  "dependencies": {
+    "xregexp": "^3.1.1"
+  }
 }
