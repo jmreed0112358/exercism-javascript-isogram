@@ -1,0 +1,19 @@
+{
+  "name": "isogram",
+  "version": "0.0.1",
+  "description": "Exercism: javascript solution for the isogram problem.",
+  "main": "isogram.js",
+  "scripts": {
+    "test": "jasmine-node isogram.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmreed0112358/exercism-javascript-isogram.git"
+  },
+  "author": "Jeremy Reed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jmreed0112358/exercism-javascript-isogram/issues"
+  },
+  "homepage": "https://github.com/jmreed0112358/exercism-javascript-isogram#readme"
+}
