@@ -3,6 +3,9 @@ var xregexp = require('xregexp'),
   InvalidParameterException = require('./exceptions/InvalidParameterException.js');
 
 var Isogram = function(sentence) {
+  if (typeof sentence !== 'string') {
+    throw new InvalidParameterException('This constructor takes a string!');
+  }
   this.sentence = sentence;
 };
 
